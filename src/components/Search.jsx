@@ -67,17 +67,22 @@ class Search extends Component {
                   </h2>
                   <div id="all-albuns">
                     {albuns.map((album) => (
-                  <div
-                  key={album.collectionId}
-                  className="album-card"
-                  onClick={() => (window.location = `/album/${album.collectionId}`)}
-                  data-testid={`link-to-album-${album.collectionId}`}
-                  >
-                  <Link className="LinkAulbum" to={`/album/${album.collectionId}`}>
-                  <img src={album.artworkUrl100} alt="" className="album-image" />
-                  {album.collectionName}
-                  </Link>
-                  </div>
+                      <div key={ album.collectionId } className="album-card">
+                        <a href={ `/album/${album.collectionId}` }>
+                          <img
+                            src={ album.artworkUrl100 }
+                            alt=""
+                            className="album-image"
+                          />
+                        </a>
+                        <Link
+                          className="LinkAulbum"
+                          to={ `/album/${album.collectionId}` }
+                          data-testid={ `link-to-album-${album.collectionId}` }
+                        >
+                          {album.collectionName}
+                        </Link>
+                      </div>
                     ))}
                   </div>
                 </>
