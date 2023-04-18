@@ -30,6 +30,7 @@ export default class MusicCard extends Component {
     if (!event.target.checked) {
       this.setState({ loading: true });
       await removeSong({ trackId });
+      this.setState({ loading: false });
     }
   };
 
