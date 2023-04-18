@@ -68,12 +68,12 @@ class Search extends Component {
                   <div id="all-albuns">
                     {albuns.map((album) => (
                       <div key={ album.collectionId } className="album-card">
-                        <img src={ album.artworkUrl100 } alt="" className="album-image" />
                         <Link
                           className="LinkAulbum"
                           to={ `/album/${album.collectionId}` }
                           data-testid={ `link-to-album-${album.collectionId}` }
                         >
+                        <img src={ album.artworkUrl100 } alt="" className="album-image" />
                           {album.collectionName}
                         </Link>
                       </div>
