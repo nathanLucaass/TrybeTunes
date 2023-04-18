@@ -1,0 +1,555 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EFF3F9;
+  display: flex;
+  flex-direction: column; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+  font-size: 32px;
+}
+#loadingL {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+  font-size: 32px;
+}
+
+#loading::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #000000;
+  animation: spin 1s ease infinite;
+}
+#loadingL::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: linear-gradient(to bottom right, #00d7e2 5%, #0039e5  50%, #00d7e2);
+  box-shadow: 0px 1px 4px rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: 400% 400%;
+  animation: gradient 10s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#logo-login{
+  width: 250px;
+  margin-bottom: 20px;
+  margin-top: -90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 15px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+}
+#loginInput{
+    border-radius: 10px;
+    size: 30px;
+    border-color: blue;
+    background-color: #ffffff4b;
+    width: 300px;
+    height: 35px;
+    font-size: large;
+    text-align: center;
+    color:blue;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+}
+#loginInput::placeholder {
+  color: #0039e5b9;
+}
+#loading{
+  color: rgb(0, 0, 0);
+}
+#loadingL{
+  color: rgb(255, 255, 255);
+}
+
+#button-login{
+  border: 0 none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  background-color: #003BE5;
+  color: white;
+  font-weight: 700px;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header-component {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  width: 250px;
+}
+
+#header-component img {
+  max-width: 100%;
+}
+
+#reader {
+  flex: 1;
+  background-color: #fff;
+  padding: 10%;
+  overflow-y: scroll;
+}
+
+#nav {
+  display: flex;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100px;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-content: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 4px rgb(0, 0, 0);
+}
+#links{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  
+}
+#nav a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+#header-user-name {
+  margin: 20px;
+  font-size: 24px;
+}
+
+#logo-header{
+  width: 150px;
+  margin-left: 15px;
+}
+#user{
+  margin-right: 15px;
+}
+
+
+
+.MusicCard {
+  background-color: #fff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  min-width: 80%;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 10px;
+  text-align: center;
+}
+#music-Load{
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+#MusicImg {
+  max-width: 100%;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+#MusicName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  margin-left: 15px;
+ 
+}
+
+
+#CardLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.1rem;
+  margin-top: 16px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#Favorite {
+  margin-right: 8px;
+}
+
+audio {
+  margin-top: 16px;
+  width: 100%;
+}
+
+#MusicInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-between;
+  align-content: center;
+}
+.all-Music{
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#search-Bar {
+  background: linear-gradient(to bottom right, #00d7e2 5%, #0039e5  50%, #00d7e2);
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  background-size: 400% 400%;
+  animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#input-Search{
+  border-radius: 25px;
+  size: 30px;
+  border: 0 none;
+  background-color: #ffffff4b;
+  width: 500px;
+  height: 48px;
+  font-size: large;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  margin: 15px;
+  margin-top: 23px;
+}
+#Pesuisa{
+font-size: 40px;
+}
+#profile-Image{
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 500px;
+  object-fit: cover;
+}
+
+#profileHeader{
+  display: flex;
+  align-items: center;
+}
+#headerProfileImg{
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  border-radius: 500px;
+  object-fit: cover;
+  
+}
+#button-Search{
+  border: 0 none;
+  font-size: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  background-color:#00D5E2;
+  color: white;
+  font-weight: 700px;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Link{
+  margin-left: 50px ;
+  margin-right: 50px;
+}
+
+.album-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  padding: 16px;
+  max-width: 300px;
+  min-width: 300px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+}
+
+#all-albuns{
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+
+.album-image{
+width: 300;
+border-radius: 5px;
+}
+
+.LinkAulbum {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+#album-Name{
+  text-align: center;
+}
+
+#result-Albuns{
+  text-align: center;
+}
+
+#music-Fav{
+  margin: 10px;
+  width: 300px;
+
+}
+
+#audio{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#band-Name{
+  text-align: center;
+}
+
+.profileCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  width: 500px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 1px 4px rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border: none;
+  font-size: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  background: linear-gradient(to right, #00d7e2 5%, #0039e5 50%, #00d7e2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease-in-out infinite;
+  color: white;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+
+
+#barProfile {
+  width: 100%;
+  background: linear-gradient(to right, #00d7e2 5%, #0039e5 50%, #00d7e2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease-in-out infinite;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#NomeProfile{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#profileDescription{
+  margin-bottom: 80px;
+}
+
+#validAlbum{
+  text-align: center;
+}
+
+#profileEdit{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  height: 650px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 1px 4px rgb(0, 0, 0);
+  border-radius: 15px;
+  margin-top: 25px;
+  color: white;
+  background: linear-gradient(to right, #00d7e2 5%, #0039e5 50%, #00d7e2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease-in-out infinite;
+}
+
+.inputEdit{
+  border-radius: 10px;
+  size: 30px;
+  background-color: #EFF3F9;
+  width: 551px;
+  height: 48px;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+#btn-edit{
+  margin-top: 15px;
+  border: 0 none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 171px;
+  min-height: 48px;
+  background-color:#00D5E2;
+  color: #ffffff;
+  font-weight: 700px;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
